@@ -36,9 +36,35 @@
 	.verticalLine{
 	border-left:1px solid #ddd;
 	}
-	#skill,#experience,#pingjia{
+	#skill,#experience,#works,#pingjia{
 	padding-top: 40px;
 	}
+  .worksWarp{
+    position: relative;
+  }
+  .worksWarp .worksShoot{
+  width: 100%;
+  }
+  .hoverShow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.6);
+  }
+  .hoverShow:hover{
+    opacity: 1;
+  }
+  .hoverShow img{
+    width: 50%;
+    margin:20% 25% 10%;
+  }
+  .hoverShow p{
+    color:#fff;
+    text-align: center;
+  }
 	#pingjia li{
 	line-height: 30px;
 	}
@@ -102,7 +128,7 @@
         <div class="row">
         <div class="col-md-6">
           <img class="img" src="http://7s1rhv.com1.z0.glb.clouddn.com/iblog_Page-jianli_bootstrap_128.png" width="128" alt="bootstrap-png">
-          <h2>BootStrap</h2>
+          <h2>Bootstrap</h2>
           <p>熟练程度:</p>
           <div class="progress">
      		<div class="progress-bar" style="width:55%">55%
@@ -124,17 +150,7 @@
 		<br>
       <div class="row">
       <h3>软件</h3>
-      <div class="col-md-3 ">
-          <img class="img" src="http://7s1rhv.com1.z0.glb.clouddn.com/iblog_Page-jianli_Dw.png" width="128" alt="DW-png">
-          <h2>Dreamweaver</h2>
-          <p>熟练程度:</p>
-          <div class="progress">
-     		<div class="progress-bar" style="width:85%">85%
-			</div>
-		  </div> 
-          <p>前端入门时使用软件，现已转移sublime</p>
-        </div>
-        <div class="col-md-3 verticalLine">
+      <div class="col-md-4">
           <img class="img" src="http://7s1rhv.com1.z0.glb.clouddn.com/iblog_Page-jianli_ps.png" width="128" alt="ps-icon">
           <h2>Photoshop</h2>
           <p>熟练程度:</p>
@@ -144,7 +160,7 @@
 		  </div> 
           <p>学习ps，让我喜欢上设计。水平有限，能完成扁平设计。审美、后期、合成技能待提高。</p>
         </div>
-        <div class="col-md-3 verticalLine">
+        <div class="col-md-4 verticalLine">
           <img class="img" src="http://7s1rhv.com1.z0.glb.clouddn.com/iblog_Page-jianli_Axure.png" width="128" alt="Axure-png">
           <h2>Axure</h2>
           <p>熟练程度:</p>
@@ -154,7 +170,7 @@
 		  </div> 
           <p>接触时间较短，平时用的不多。能完成大部分原型绘制。</p>
         </div>
-        <div class="col-md-3 verticalLine">
+        <div class="col-md-4 verticalLine">
           <img class="img" src="http://7s1rhv.com1.z0.glb.clouddn.com/iblog_Page-jianli_AI.png" width="128" alt="AI-png">
           <h2>Illustrator</h2>
           <p>熟练程度:</p>
@@ -169,42 +185,102 @@
 <!--skillEnd-->
 <!--experience-->
   <div id="experience" class="container">
-      <h2 class="text-center">工作经历/experience</h2>
-      <hr>
-      <table class="table table-striped table-bordered table-hover">
-   <thead>
-     <tr>
-       <th>公司</th>
-       <th>岗位及职责</th>
-       <th>时间</th>
-     </tr>
-   </thead>
-   <tbody>
-     <tr>
-       <td><p>湖南梦洁家纺股份有限公司（电商事业部）</p></td>
-       <td>
-          <p>岗位：淘宝店铺前端</p>
-          <p>职责：负责天猫、淘宝、1号店、当当等平台的店铺装修</p>
-       </td>
-       <td><p>2013.06——2015.01</p></td>
-     </tr>
-     <tr>
-       <td><p>深圳钛铂新媒体营销股份有限公司（技术中心）</p></td>
-       <td>
-          <p>岗位：初级前端工程师</p>
-          <p>职责：微信H5开发，微信第三方平台开发</p>
-       </td>
-       <td><p>2015.07——2016.03</p></td>
-     </tr>
-   </tbody>
-   </table>
+    <h2 class="text-center">工作经历/experience</h2>
+    <hr>
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+           <tr>
+             <th>公司</th>
+             <th>岗位及职责</th>
+             <th>时间</th>
+           </tr>
+        </thead>
+       <tbody>
+         <tr>
+           <td><p>湖南梦洁家纺股份有限公司（电商事业部）</p></td>
+           <td>
+              <p>岗位：淘宝店铺前端</p>
+              <p>职责：负责天猫、淘宝、1号店、当当等平台的店铺装修</p>
+           </td>
+           <td><p>2013.06——2015.01</p></td>
+         </tr>
+         <tr>
+           <td><p>深圳钛铂新媒体营销股份有限公司（技术中心）</p></td>
+           <td>
+              <p>岗位：初级前端工程师</p>
+              <p>职责：微信H5开发，微信第三方平台开发</p>
+           </td>
+           <td><p>2015.07——2016.03</p></td>
+         </tr>
+       </tbody>
+    </table>
   </div>
+<!--近期作品-->
+  <div id="works" class="container">
+      <h2 class="text-center">作品展示/works show</h2>
+      <hr>
+      <div class="row">
+        <h3>微信H5</h3>
+        <div class="col-md-3">
+          <div class="worksWarp">
+            <img class="worksShoot" src="http://7s1rhv.com1.z0.glb.clouddn.com/works-mobile-01.jpg" alt="">
+            <div class="hoverShow">
+              <img src="http://7s1rhv.com1.z0.glb.clouddn.com/works-qrcode-01.png" alt="">
+              <p>海航集团乐子计划H5推广微海报</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 verticalLine">
+          <div class="worksWarp">
+            <img class="worksShoot" src="http://7s1rhv.com1.z0.glb.clouddn.com/works-mobile-02.jpg" alt="">
+            <div class="hoverShow">
+              <img src="http://7s1rhv.com1.z0.glb.clouddn.com/works-qrcode-02.png" alt="">
+              <p>华为史上颜值最高的浪漫发布会有你们吗？</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 verticalLine">
+          <div class="worksWarp">
+            <img class="worksShoot" src="http://7s1rhv.com1.z0.glb.clouddn.com/works-mobile-03.jpg" alt="">
+            <div class="hoverShow">
+              <img src="http://7s1rhv.com1.z0.glb.clouddn.com/works-qrcode-03.png" alt="">
+              <p>“不是一个人摄影大赛”作品收集H5</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 verticalLine">
+          <div class="worksWarp">
+            <img class="worksShoot" src="http://7s1rhv.com1.z0.glb.clouddn.com/works-mobile-04.jpg" alt="">
+            <div class="hoverShow">
+              <img src="http://7s1rhv.com1.z0.glb.clouddn.com/works-qrcode-04.png" alt="">
+              <p>飞利浦产品家族</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <h3>微信第三方平台截图</h3>
+        <div class="col-md-6 worksWarp">
+          <a href="http://7s1rhv.com1.z0.glb.clouddn.com/works-pc-01.jpg" target="_blank">
+            <img class="worksShoot" src="http://7s1rhv.com1.z0.glb.clouddn.com/works-pc-01.jpg" alt="" title="点击查看大图">
+          </a>
+        </div>
+        <div class="col-md-6 verticalLine worksWarp">
+          <a href="http://7s1rhv.com1.z0.glb.clouddn.com/works-pc-02.jpg" target="_blank">
+            <img class="worksShoot" src="http://7s1rhv.com1.z0.glb.clouddn.com/works-pc-02.jpg" alt="" title="点击查看大图">
+          </a>
+        </div>
+      </div>
+
+  </div>
+<!--近期作品End-->
 <!--评价-->
   <div id="pingjia" class="container">
    <h2 class="text-center">自我评价/evaluation</h2>
       <hr>
         <ul>
-          <li>本人性格内向、稳重、有活力，待人热情、真诚</li>
+          <li>性格内向、稳重、有活力，待人真诚</li>
           <li>工作认真负责，积极主动，能吃苦耐劳，敢于迎接挑战</li>
           <li>有较强的动手能力和团体协作精神，能迅速的适应各种环境，自学能力强</li>
         </ul>
